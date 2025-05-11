@@ -1,0 +1,43 @@
+@use "../abstracts/abstracts" as *;
+
+main {
+
+    img {
+        width: 210px;
+        margin-bottom: 10px;
+    }
+    // &.img-principal {
+    //     width: 210px;
+    //     margin-bottom: 10px;
+    // }
+
+    h1 {
+        width: 210px;
+        padding: 0 16px;
+        font-weight: 800;
+        font-size: 38px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: $secondary-font;
+        width: 210px;
+        padding: 0 16px;
+        font-weight: 200;
+        font-size: 9px;
+        line-height: 1.5;
+        
+    }
+
+    a {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+
+        // img {
+        //     padding: 24px;
+        //     background-color: $color-orange;
+        // }
+    }
+}
