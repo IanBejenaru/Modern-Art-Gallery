@@ -1,30 +1,32 @@
 @use "../abstracts/abstracts" as *;
 
+$margen-mobil: 345px;
+//$margen-mobil: 210px; Es el más pequeño de todos.
+
 main {
     margin-bottom: 120px;
 
     .img-principal {
-        width: 210px;
-        margin-bottom: 10px;
+        width: $margen-mobil;
+        //width: 210px; Esto es lo más pequeño
+        margin-bottom: 32px;
     }
 
     h1, h2 {
-        width: 210px;
-        //width: 414px;
+        width: $margen-mobil;
+        font-size: 69px;
         padding: 0 16px;
         font-weight: 800;
-        font-size: 38px;
-        //font-size: 60px;
         line-height: 0.9;
         margin-bottom: 20px;
     }
 
     p {
         font-family: $secondary-font;
-        width: 210px;
+        width: $margen-mobil;
+        font-size: 16px;
         padding: 0 16px;
         font-weight: 200;
-        font-size: 9px;
         line-height: 1.5;
         margin-bottom: 32px;
         
@@ -38,7 +40,7 @@ main {
 
         &-derecho{
             @include btn-right();
-            font-size: 16px;
+            font-size: 18px;
             letter-spacing: 2px;
         }
 
@@ -54,13 +56,13 @@ main {
     }
 
     .img-2, .img-3 {
-        width: 210px;
+        width: $margen-mobil;
         margin-bottom: 10px;
         padding: 0 16px;
     }
 
     .img-4 {
-        width: 210px;
+        width: $margen-mobil;
         margin-bottom: 10px;
         padding: 16px 16px;
     }
@@ -68,19 +70,18 @@ main {
     .section__inicial {
         margin-right: 16px;
         margin-left:16px;
-        width: 178px;
+        //width: 178px;
+        width: calc(#{$margen-mobil} - 32px);
+
         background-color: $color-black;
 
         h3 {
             color: $color-white;
-            width: 170px;
-            //width: 414px;
-            //padding: 24px 48px 24px;
-            padding-left: 24px;
-            padding-top: 48px;
-            padding-right: 24px;
+            //width: 170px;
+            width: calc(#{$margen-mobil} - 40px);
+            padding: 48px 24px 0 24px;
             font-weight: 800;
-            font-size: 20px;
+            font-size: 60px;
             line-height: 0.9;
             margin-bottom: 20px;
         }
@@ -89,10 +90,11 @@ main {
             color: $color-white;
 
             font-family: $secondary-font;
-            width: 170px;
+            //width: 170px;
+            width: calc(#{$margen-mobil} - 40px);
             padding: 0 24px;
             font-weight: 200;
-            font-size: 9px;
+            font-size: 16px;
             line-height: 1.5;
             padding-bottom: 32px;
             margin-bottom: 32px;
