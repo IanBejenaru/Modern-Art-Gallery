@@ -43,8 +43,12 @@
 
 
 @mixin btn-right() {
-  padding: 24px 32px;
+  padding: 24px 22px;
   background-color: $color-black;
-  color: $color-orange;
+  color: $color-white;
+  text-decoration: none;
+  &:hover {
+    background-color: $color-orange;
+  }
   
 }
