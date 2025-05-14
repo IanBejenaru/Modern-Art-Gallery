@@ -3,17 +3,20 @@
 $margen-mobil: 100%;
 //$margen-mobil: 210px; Es el más pequeño de todos.
 
+
+
+
 main {
     margin-bottom: 120px;
 
     .img-principal {
-        width: $margen-mobil;
+        width: 100%;
         //width: 210px; Esto es lo más pequeño
         margin-bottom: 32px;
     }
 
     h1, h2 {
-        width: $margen-mobil;
+        width: 100%;
         font-size: 69px;
         padding: 0 16px;
         font-weight: 800;
@@ -107,4 +110,112 @@ main {
     }
     
 
+}
+
+@include breakpoint(tablet) {
+    main {
+    margin-bottom: 137px;
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 1fr 1fr 1fr ;  /* 5 filas de 100px de alto */
+            margin-bottom: 103px;
+            padding-right: 40px;
+
+            .img-principal {
+                width: 100%;
+                max-width: 1024px;
+                //width: 210px; Esto es lo más pequeño
+                margin-bottom: 32px;
+                grid-column: 1 / 2;
+                grid-row: 1 / 5;
+            }
+
+            h1 {
+                width: 95%;
+                grid-column: 2 / 2;
+                grid-row: 2 / 3;
+                margin-left: -60px;
+                font-size: 70px;
+            }
+
+            p {
+                width: 100%;
+                grid-column: 2 / 2;
+                grid-row: 3 / 3;
+                margin-left: -60px;
+                font-size: 18px;
+                padding: 0 13px;
+            }
+
+            .boton {
+                width: 100%;
+                grid-column: 2 / 2;
+                grid-row: 4 / 4;
+                margin-left: -60px;
+            }
+
+            &__imagen-2 {
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                
+                .gallery-img {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        display: block;
+                    }
+                }
+
+                .gallery-text {
+                    width: 71%;
+                    display: flex;            // Para alinear contenido interno
+                    flex-direction: column;
+                    justify-content: center;  // Centra verticalmente el texto
+                    padding: 40px;            // Espaciado interno
+                    height: 100%;              // Clave: asegurar que ocupe toda la celda
+                    padding: 0;
+                }
+            }
+
+            &__imagen-3 {
+                display: flex;
+                align-items: center;
+
+                .img-3 {
+                    margin-right: 0;
+                    padding-right: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                &-container {
+                    .img-4 {
+                        margin-top: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+
+                    .section__inicial {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        p {
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                
+            }
+
+        }
+       
+    }
+       
 }
