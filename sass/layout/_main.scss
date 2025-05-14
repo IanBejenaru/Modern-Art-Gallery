@@ -1,6 +1,6 @@
 @use "../abstracts/abstracts" as *;
 
-$margen-mobil: 345px;
+$margen-mobil: 100%;
 //$margen-mobil: 210px; Es el más pequeño de todos.
 
 main {
@@ -46,9 +46,12 @@ main {
 
         &-img {
             //width: 28px;
-            padding: 21px;
+            padding: 22px;
             background-color: $color-orange;
-            &:hover {
+        }
+        
+        &:hover {
+            .boton-img {
                 background-color: $color-black;
             }
         }

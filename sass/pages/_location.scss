@@ -1,0 +1,121 @@
+@use "../abstracts/abstracts" as *;
+
+.location {
+    margin-bottom: 0;
+
+    &__hero {
+        position: relative; // Contenedor que permite posicionar internamente
+    }
+
+    &__img-principal {
+        width: 100%;
+        display: block;
+    }
+
+    &__boton {
+        display: flex;
+        align-items: center;
+        margin-bottom: 120px;
+        position: absolute;
+        top:0;
+        left: 0;
+
+        &-derecho-location{
+            @include btn-right();
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        &-img-location {
+            padding: 22px;
+            background-color: $color-orange;
+        }
+
+        &:hover {
+            .location__boton-img-location {
+                background-color: $color-black;
+            }
+        }
+    }
+    
+    &__hero-content {
+        background-color: $color-black;
+        
+    }
+
+    &__titulo {
+        width: 100%;
+        color: $color-white;
+        font-size: 60px;
+        padding: 0 16px;
+        font-weight: 800;
+        line-height: 0.9;
+        //margin-bottom: 20px;
+        padding-top: 48px;
+    }
+
+    &__subtitulo {
+        color: $color-orange;
+        width: calc(#{100%} - 40px);
+        padding: 48px 24px 0 24px;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    &__parrafo {
+        font-family: $secondary-font;
+        width: 100%;
+        font-size: 16px;
+        padding: 0 16px;
+        font-weight: 200;
+        //line-height: 1.5;
+        margin-bottom: 0;
+        color: $color-white; 
+    }
+
+    &__parrafo-contenido {
+        font-family: $secondary-font;
+        width: 100%;
+        font-size: 16px;
+        padding: 0 16px 56px;
+        font-weight: 200;
+        //line-height: 1.5;
+        margin-top: 20px;
+        margin-bottom: 0;
+        color: $color-white; 
+    }
+
+    &__logotipo {
+        filter: brightness(0%) saturate(0%);
+    }
+
+    &__parrafo-footer {
+        color: $color-black;
+        font-family: $secondary-font;
+        width: calc(#{100%} - 40px);
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        margin-top: 38px;
+    }
+
+    &__contenedor-redes {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        filter: brightness(0%) saturate(0%);
+    }
+
+}
+
+footer.location {
+    background-color: $color-orange;
+    //padding: 0;
+    //margin: 0;
+
+}
+
