@@ -36,9 +36,7 @@ footer {
         justify-content: space-between;
         gap: 60px;
         
-        img.logotipo {
-            //margin-top: -30px;
-        }
+
 
         p{
             width: 36%;
@@ -48,8 +46,28 @@ footer {
             display: flex;
             align-items: center;
             gap: 20px;
+        }
+    }
 
-            //margin-top: -120px;
+}
+
+@include breakpoint(desktop) {
+    footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 60px;
+        
+
+
+        p{
+            width: 36%;
+        }
+        
+        div.logotipo__contenedor-redes {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
     }
 

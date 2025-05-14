@@ -9,3 +9,16 @@
 body {
   //background-color: blue;
 }
+@include breakpoint(desktop) {
+  body::before {
+    content: '';
+    position: absolute; // o fixed, según el comportamiento que desees
+    top: 0;
+    left: 0;
+    width: 345px;       // ancho específico del rectángulo
+    height: 90vh;      // alto del viewport
+    background-color: black;
+    z-index: -1;        // detrás del contenido
+  }
+
+}

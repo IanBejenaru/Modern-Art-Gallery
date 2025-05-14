@@ -29,6 +29,7 @@
         &-img-location {
             padding: 22px;
             background-color: $color-orange;
+
         }
 
         &:hover {
@@ -112,10 +113,64 @@
 
 }
 
+.location__boton-img-location {
+  transform: rotate(180deg);
+  //transition: transform 0.3s ease; // Opcional: para animar la transformación
+}
+
 footer.location {
     background-color: $color-orange;
     //padding: 0;
     //margin: 0;
 
 }
+
+//Responsive para tablet:
+@include breakpoint(tablet) {
+    .location {
+
+        &__boton {
+            margin-left: 39px;
+        }
+
+        &__hero-content {
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        &__subtitulo {
+            margin-left: 0;
+            padding-left: 16px;
+        }
+    }
+
+}
+
+//Responsive para PC:
+@include breakpoint(desktop) {
+    .location {
+
+        &__boton {
+            margin:0 120px;
+        }
+
+        &__hero-content {
+            display: flex;
+            padding-bottom: 10px;
+            padding: 0 120px;
+        }
+
+        &__subtitulo {
+            margin-left: 0;
+            padding-left: 16px;
+        }
+    }
+
+    footer.location {
+        padding: 80px 165px ;
+
+    }
+
+}
+
 
